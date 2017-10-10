@@ -22,11 +22,11 @@ var calculator = {
     input: {
         number: function(num){
             // Clear initial zero to make room for input
-            if(calculator.displayVal.localeCompare("0") === 0){
-                calculator.displayVal = "";
+            if(calculator.displayString.localeCompare("0") === 0){
+                calculator.displayString = "";
             }
-            // Append input to displayVal string
-            calculator.displayVal += num;
+            // Append input to display string
+            calculator.displayString += num;
         },
     },
 

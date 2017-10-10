@@ -6,7 +6,7 @@ app.controller('controller', [
     "$scope",
     function($scope){
 
-        $scope.model = {display: displayVal};
+        $scope.model = {display: calculator.displayString};
 
         $scope.inputNum = function(num){
             calculator.input.number(num);
