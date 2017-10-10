@@ -1,5 +1,6 @@
 body {
-  background-color: #222;
+  background-image: url("./background.jpeg");
+  background-size: cover;
 
   /* Center everything */
   display: flex;
@@ -11,21 +12,32 @@ body {
 #main-wrapper{
     margin-top: 25px;
     width: 300px;
-    border-radius: 15px;
+    border-width: 30px 30px 60px 30px;
+    border-radius: 30px;
+
+    border-color: #345;
+    border-style: solid;
+    box-shadow: 10px 10px 5px #444;
 }
 
 /* Calculator screen */
 #display{
-    border-color: black;
+    border-color: black!important;
+    border-style: solid!important;
+    border-width: 2px 1px 1px 2px!important;
     background-color: white;
     width: 100%;
+    height: 50px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 
 /* Calculator buttons */
 .btn{
     border-color: black;
-    border-radius: 0;
+    border-radius: 2px;
+    border-width: 1px 3px 3px 1px;
+    border-style: outset;
 }
 .btn-num{
     background-color: #eee;
@@ -38,7 +50,9 @@ body {
 }
 
 .btn:active{
-    background-color: green;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    background-color: #666;
 }
 
 /* Make it neat and purdy */
