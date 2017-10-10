@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>JCalc</title>
+
+    <meta name="author" content="Jacob Hunt">
+    <meta name="description" content="A simple JavaScript calculator by Jacob Hunt">
+    <meta name="keywords" content="simple, javascript, calculator, math, html, css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" type="text/css">
+  </head>
+
+
+  <body ng-controller="controller">
+
+    <!-- Main UI -->
+    <div class="container" id="main-wrapper">
+
+      <div class="row">
+        <div class="col-xs-12 border" id="display">
+          <h1>{{model.display}}<h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-8 btn btn-def">
+          <h1>AC</h1>
+        </div>
+        <div class="col-xs-4 btn btn-def">
+          <h1>&larr;</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 btn btn-num">
+          <h1 ng-click="inputNum('7')">7</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>8</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>9</h1>
+        </div>
+        <div class="col-xs-3 btn btn-def">
+          <h1>/</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 btn btn-num">
+          <h1>4</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>5</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>6</h1>
+        </div>
+        <div class="col-xs-3 btn btn-def">
+          <h1>*</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 btn btn-num">
+          <h1>1</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>2</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>3</h1>
+        </div>
+        <div class="col-xs-3 btn btn-def">
+          <h1>-</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3 btn btn-num">
+          <h1>0</h1>
+        </div>
+        <div class="col-xs-3 btn btn-num">
+          <h1>.</h1>
+        </div>
+        <div class="col-xs-3 btn btn-eq">
+          <h1>=</h1>
+        </div>
+        <div class="col-xs-3 btn btn-def">
+          <h1>+</h1>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

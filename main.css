@@ -1,0 +1,47 @@
+body {
+  background-color: #222;
+
+  /* Center everything */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Calculator skin */
+#main-wrapper{
+    margin-top: 25px;
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* Calculator screen */
+#display{
+    border-color: black;
+    background-color: white;
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* Calculator buttons */
+.btn{
+    border-color: black;
+    border-radius: 0;
+}
+.btn-num{
+    background-color: #eee;
+}
+.btn-eq{
+    background-color: #7fa;
+}
+.btn-def{
+    background-color: #aaa;
+}
+
+.btn:active{
+    background-color: green;
+}
+
+/* Make it neat and purdy */
+.col-xs-3{width: 25%;}
+.col-xs-4{width: 33.33333%;}
+.col-xs-8{width: 66.66667%;}
