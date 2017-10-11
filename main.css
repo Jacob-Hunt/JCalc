@@ -12,13 +12,28 @@ body {
 #main-wrapper{
     margin-top: 25px;
     width: 300px;
-    border-width: 30px 30px 60px 30px;
-    border-radius: 30px;
 
-    border-color: #333;
-    border-style: solid;
+    position: relative;
+    border: solid transparent;
+    border-width: 0px 6px 6px 0px;
+    border-radius: 16px;
+    background: linear-gradient(to bottom right, #566, #111);
+    background-clip: padding-box;
+    padding: 30px 30px 60px 30px;
 
     box-shadow: 10px 10px 5px #444;
+}
+
+#main-wrapper::after{
+    position: absolute;
+    top: 0px;
+    bottom: -6px;
+    left: 0px;
+    right: -6px;
+    background: linear-gradient(#111, #000);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
 }
 
 /* Calculator screen */
@@ -51,7 +66,7 @@ body {
     background-color: #eee;
 }
 .btn-eq{
-    background-color: #2fa;
+    background-color: #aff;
 }
 .btn-def{
     background-color: #aaa;
