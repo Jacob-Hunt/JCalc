@@ -23,7 +23,7 @@
 
       <div class="row">
         <div class="col-xs-12 border" id="display">
-          <h4>{{model.display}}<h4>
+          <h4>{{display.number}}<h4>
           <h4>+</h4>
         </div>
       </div>
@@ -32,19 +32,19 @@
         <div class="col-xs-8 btn btn-def">
           <h1>AC</h1>
         </div>
-        <div class="col-xs-4 btn btn-def">
+        <div class="col-xs-4 btn btn-def" ng-click="buttons.back()">
           <h1>&larr;</h1>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('7')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('7')">
           <h1>7</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('8')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('8')">
           <h1>8</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('9')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('9')">
           <h1>9</h1>
         </div>
         <div class="col-xs-3 btn btn-def">
@@ -53,13 +53,13 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('4')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('4')">
           <h1>4</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('5')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('5')">
           <h1>5</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('6')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('6')">
           <h1>6</h1>
         </div>
         <div class="col-xs-3 btn btn-def">
@@ -68,13 +68,13 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('1')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('1')">
           <h1>1</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('2')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('2')">
           <h1>2</h1>
         </div>
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('3')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('3')">
           <h1>3</h1>
         </div>
         <div class="col-xs-3 btn btn-def">
@@ -83,7 +83,7 @@
       </div>
 
       <div class="row">
-        <div class="col-xs-3 btn btn-num" ng-click="inputNum('0')">
+        <div class="col-xs-3 btn btn-num" ng-click="buttons.number('0')">
           <h1>0</h1>
         </div>
         <div class="col-xs-3 btn btn-num">

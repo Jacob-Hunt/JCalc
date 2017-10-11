@@ -6,11 +6,26 @@ app.controller('controller', [
     "$scope",
     function($scope){
 
-        $scope.model = {display: calculator.displayString};
+        $scope.display = {
+            number: calculator.displayString,
+            update: function(){
+                $scope.display.number = calculator.displayString;
+            }
+        };
 
-        $scope.inputNum = function(num){
-            calculator.input.number(num);
-            $scope.model.display = calculator.displayString;
+        // Handler for calculator buttons
+        $scope.buttons = {
+
+            // Number keys
+            number: function(num){
+                calculator.input.number(num);
+                $scope.display.update();
+            },
+
+            back: function(){
+                calculator.input.back();
+                $scope.display.update();
+            },
         };
         
     }
