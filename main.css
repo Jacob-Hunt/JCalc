@@ -15,9 +15,10 @@ body {
 
     position: relative;
     border: solid transparent;
-    border-width: 0px 6px 6px 0px;
+    border-width: 1px 6px 6px 1px;
     border-radius: 16px;
-    background: linear-gradient(to bottom right, #566, #111);
+    background-color: #444;
+    background: linear-gradient(to bottom right, #566, #101);
     background-clip: padding-box;
     padding: 30px 30px 60px 30px;
 
@@ -26,9 +27,9 @@ body {
 
 #main-wrapper::after{
     position: absolute;
-    top: 0px;
+    top: -1px;
     bottom: -6px;
-    left: 0px;
+    left: -1px;
     right: -6px;
     background: linear-gradient(#111, #000);
     content: '';
@@ -62,23 +63,42 @@ body {
     border-width: 1px 3px 3px 1px;
     border-style: outset;
 }
-.btn-num{
-    background-color: #eee;
-}
-.btn-eq{
-    background-color: #aff;
-}
-.btn-def{
-    background-color: #aaa;
-}
-
 .btn:active{
     border-style: solid;
     border-width: 1px 1px 1px 1px;
-    background-color: #666;
 }
 
-/* Make it neat and purdy */
+.btn-num{
+    background-color: #eee;
+    background: linear-gradient(to bottom right, #eee, #999);
+}
+.btn-num:active{
+    background-color: #aaa;
+    background: linear-gradient(to bottom right, #444, #777);
+    color: #000;
+}
+
+.btn-eq{
+    background-color: #aff;
+    background: linear-gradient(to bottom right, #aff, #6aa);
+}
+.btn-eq:active{
+    background-color: #399;
+    background: linear-gradient(to bottom right, #399, #6aa);
+    color: #000;
+}
+
+.btn-def{
+    background-color: #aaa;
+    background: linear-gradient(to bottom right, #aaa, #666);
+}
+.btn-def:active{
+    background-color: #666;
+    background: linear-gradient(to bottom right, #444, #888);
+    color: #000;
+}
+
+/* Grid */
 .col-xs-3{width: 25%;}
 .col-xs-4{width: 33.33333%;}
 .col-xs-8{width: 66.66667%;}
