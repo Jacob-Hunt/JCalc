@@ -55,6 +55,7 @@ body {
 
     overflow-x: scroll;
     overflow-y: hidden;
+    white-space: nowrap;
 }
 
 /* Calculator buttons */
