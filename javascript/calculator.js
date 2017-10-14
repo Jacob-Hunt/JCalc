@@ -1,7 +1,5 @@
 /* Object for handling lower-level calculator logic */
 
-// TODO: handle case of using zeroes in operations
-
 var calculator = {
 
     // Current user input
@@ -13,6 +11,9 @@ var calculator = {
     // Has user already placed a decimal point
     decimalUsed: false,
 
+    // If a calculation results in an undefined number
+    UNDEFINED_MSG: "Undefined",
+
     // Misc. methods
     methods: {
         clearInputString: function(){
@@ -22,11 +23,32 @@ var calculator = {
             calculator.inputString = "0";
         },
 
+        clearUndefined: function(){
+            // Checks if inputString reads "undefined" and replaces
+            // "undefined" with "0"
+            if(calculator.inputString.localeCompare(calculator.UNDEFINED_MSG) === 0){
+                calculator.methods.clearInputString();
+            }
+        },
+
         calculate: function(){
             // Calculate expression in memoryString
             calculator.operation.apply("");
             calculator.operation.store();
             calculator.inputString = math.eval(calculator.memoryString);
+            
+            // Make division by zero mathematically correct
+            if(calculator.inputString === Infinity 
+            || calculator.inputString === -Infinity
+            || isNaN(calculator.inputString)){
+                calculator.inputString = calculator.UNDEFINED_MSG;
+            }
+
+            // Convert result to string
+            if(!isNaN(calculator.inputString)){
+                calculator.inputString = calculator.inputString.toString();
+            }
+
             calculator.memoryString = "";
         },
     },
@@ -51,20 +73,6 @@ var calculator = {
                 calculator.inputString = calculator.inputString.slice(0, -3);
                 calculator.inputString += " " + type + " ";
             } 
-
-            // If user has deleted all numbers in input string but
-            // not cleared memory
-            else if(calculator.inputString === "0"
-            && calculator.memoryString !== ""){
-                calculator.memoryString = calculator.memoryString.slice(0, -3);
-                calculator.memoryString += " " + type + " ";
-            }
-
-            // If user has not provided any input
-            else if(calculator.inputString === "0" 
-            && calculator.memoryString === ""){
-                return;
-            }
             
             // If inputString ends with a decimal
             else if(calculator

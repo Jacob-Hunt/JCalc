@@ -21,24 +21,28 @@ app.controller('controller', [
 
             // Number keys
             number: function(num){
+                calculator.methods.clearUndefined();
                 calculator.input.number(num);
                 $scope.display.update();
             },
 
             // Operator keys
             operator: function(sym){
+                calculator.methods.clearUndefined();
                 calculator.input.operator(sym);
                 $scope.display.update();
             },
 
             // Decimal point key
             decimal: function(){
+                calculator.methods.clearUndefined();
                 calculator.input.decimal();
                 $scope.display.update();
             },
 
             // Backspace key
             back: function(){
+                calculator.methods.clearUndefined();
                 calculator.input.back();
                 $scope.display.update();
             },
@@ -51,6 +55,7 @@ app.controller('controller', [
 
             // Equals key
             equals: function(){
+                calculator.methods.clearUndefined();
                 calculator.input.equals();
                 $scope.display.update();
             }
