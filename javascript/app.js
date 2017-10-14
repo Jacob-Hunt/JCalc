@@ -7,9 +7,9 @@ app.controller('controller', [
     function($scope){
 
         $scope.display = {
-            number: calculator.displayString,
+            number: calculator.inputString,
             update: function(){
-                $scope.display.number = calculator.displayString;
+                $scope.display.number = calculator.inputString;
             }
         };
 
@@ -22,8 +22,21 @@ app.controller('controller', [
                 $scope.display.update();
             },
 
+            // Decimal point key
+            decimal: function(){
+                calculator.input.decimal();
+                $scope.display.update();
+            },
+
+            // Backspace key
             back: function(){
                 calculator.input.back();
+                $scope.display.update();
+            },
+
+            // AC key
+            reset: function(){
+                calculator.input.reset();
                 $scope.display.update();
             },
         };

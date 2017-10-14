@@ -1,18 +1,15 @@
+/* Object for handling lower-level calculator logic */
+
 var calculator = {
 
     // Current stored numerical value in calculator memory
     currentNumber: 0.0,
 
     // String to display on screen
-    displayString: "0",
+    inputString: "0",
 
-
-    // Handler for decimal points
-    decimalPoint: {
-        on: false,
-        position: undefined
-    },
-    
+    // Has user already placed a decimal point
+    decimalUsed: false,
 
     // Current mathematical operation
     operation: {
@@ -27,20 +24,42 @@ var calculator = {
         // Number keys
         number: function(num){
             // Clear initial zero to make room for input
-            if(calculator.displayString.localeCompare("0") === 0){
-                calculator.displayString = "";
+            if(calculator.inputString.localeCompare("0") === 0){
+                calculator.inputString = "";
             }
             // Append input to display string
-            calculator.displayString += num;
+            calculator.inputString += num;
         },
 
-        // Backspace button
-        back: function(){
-            calculator.displayString = calculator.displayString.slice(0, -1);
-            if(calculator.displayString.localeCompare("") === 0){
-                calculator.displayString = "0";
+        // Decimal key
+        decimal: function(){
+            if(!calculator.decimalUsed){
+                calculator.inputString += ".";
+                calculator.decimalUsed = true;
             }
-        }
+        },
+
+        // Backspace key
+        back: function(){
+            // If user deletes decimal
+            if(calculator.inputString[calculator.inputString.length - 1] === "."){
+                calculator.decimalUsed = false;
+            }
+
+            // Delete last number of inputString
+            calculator.inputString = calculator.inputString.slice(0, -1);
+
+            // If all input deleted
+            if(calculator.inputString.localeCompare("") === 0){
+                calculator.inputString = "0";
+            }
+        },
+
+        // AC key
+        reset: function(){
+            calculator.inputString = "0";
+            calculator.decimalUsed = false;
+        },
     },
 
 };
