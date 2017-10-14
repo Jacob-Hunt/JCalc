@@ -100,7 +100,7 @@ body {
     color: #000;
 }
 
-/* Grid */
+/* Grid spacing */
 .col-xs-3{width: 25%;}
 .col-xs-4{width: 33.33333%;}
 .col-xs-8{width: 66.66667%;}

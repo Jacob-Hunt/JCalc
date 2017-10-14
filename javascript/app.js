@@ -6,6 +6,7 @@ app.controller('controller', [
     "$scope",
     function($scope){
 
+        // Calculator screen
         $scope.display = {
             number: calculator.inputString,
             memory: calculator.memoryString,

@@ -14,7 +14,6 @@ var calculator = {
     // Has user already placed a decimal point
     decimalUsed: false,
 
-
     // Misc. methods
     methods: {
         clearInputString: function(){
