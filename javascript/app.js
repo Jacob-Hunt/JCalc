@@ -48,6 +48,12 @@ app.controller('controller', [
                 calculator.input.reset();
                 $scope.display.update();
             },
+
+            // Equals key
+            equals: function(){
+                calculator.input.equals();
+                $scope.display.update();
+            }
         };
         
     }

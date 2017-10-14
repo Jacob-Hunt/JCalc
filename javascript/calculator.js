@@ -1,9 +1,8 @@
 /* Object for handling lower-level calculator logic */
 
-var calculator = {
+// TODO: handle case of using zeroes in operations
 
-    // Current stored numerical value in calculator memory
-    currentNumber: 0.0,
+var calculator = {
 
     // Current user input
     inputString: "0",
@@ -21,7 +20,15 @@ var calculator = {
             calculator.operation.on = false;
             calculator.decimalUsed = false;
             calculator.inputString = "0";
-        }
+        },
+
+        calculate: function(){
+            // Calculate expression in memoryString
+            calculator.operation.apply("");
+            calculator.operation.store();
+            calculator.inputString = math.eval(calculator.memoryString);
+            calculator.memoryString = "";
+        },
     },
 
     // Mathematical operation handler
@@ -155,6 +162,11 @@ var calculator = {
         reset: function(){
             calculator.methods.clearInputString();
             calculator.memoryString = "";
+        },
+
+        // Equals key
+        equals: function(){
+            calculator.methods.calculate();
         },
     },
 
