@@ -8,8 +8,10 @@ app.controller('controller', [
 
         $scope.display = {
             number: calculator.inputString,
+            memory: calculator.memoryString,
             update: function(){
                 $scope.display.number = calculator.inputString;
+                $scope.display.memory = calculator.memoryString;
             }
         };
 
@@ -19,6 +21,12 @@ app.controller('controller', [
             // Number keys
             number: function(num){
                 calculator.input.number(num);
+                $scope.display.update();
+            },
+
+            // Operator keys
+            operator: function(sym){
+                calculator.input.operator(sym);
                 $scope.display.update();
             },
 
