@@ -11,6 +11,11 @@ body {
   justify-content: center;
 }
 
+hr {
+    width: 100%;
+    background-color: #444;
+}
+
 #left-col{
     display: flex;
     justify-content: center;
